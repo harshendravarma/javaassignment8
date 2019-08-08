@@ -45,5 +45,8 @@ public class Main {
 		}catch(Invalidphonenumberformat | Invalidpannumberformat|Invalidadhaarnumberformat  ex) {
 			System.out.println(ex.getMessage());
 		}
+		finally {
+			System.out.println("finaly runs everytime");
+		}
 	}
 }
