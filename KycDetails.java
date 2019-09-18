@@ -1,25 +1,30 @@
 package assignment8;
 
 class KycDetails {
-	String phonenumber;
-	String adhaarnumber;
-	String pannumber;
+	
+	String phoneNumber;
+	String adhaarNumber;
+	String panNumber;
 
-	KycDetails(String phonenumber, String adhaarnumber, String pannumber) {
-		this.phonenumber = phonenumber;
-		this.adhaarnumber = adhaarnumber;
-		this.pannumber = pannumber;
+	KycDetails(String phoneNumber, String adhaarNumber, String panNumber) {
+		this.phoneNumber = phoneNumber;
+		this.adhaarNumber = adhaarNumber;
+		this.panNumber = panNumber;
 	}
-
+	
+	//checks if given numbers are in correct format or not
 	public void isvalild() throws InvalidPhoneNumberFormat, InvalidAdhaarNumberFormat, InvalidPanNumberFormat {
-		if (phonenumber.length() < 10 || phonenumber.length() > 10) {
+		
+		if (phoneNumber.length() < 10 || phoneNumber.length() > 10) {
 			throw new InvalidPhoneNumberFormat("phone number is invalid");
 		}
-		if (adhaarnumber.length() < 12 || adhaarnumber.length() > 12) {
+		if (adhaarNumber.length() < 12 || adhaarNumber.length() > 12) {
 			throw new InvalidAdhaarNumberFormat(" adhaarnumber is invalid");
 		}
-		if (pannumber.length() < 8 || pannumber.length() > 8) {
+		if (panNumber.length() < 8 || panNumber.length() > 8) {
 			throw new InvalidPanNumberFormat("pannumber  is invalid");
 		}
+		
 	}
+	
 }
